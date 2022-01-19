@@ -45,10 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:minDate="1/1/0"
-        android:maxDate="31/12/9999"
         android:calendarViewShown="false"
-        android:datePickerMode="spinner" />
+        android:datePickerMode="spinner"
+        android:maxDate="31/12/9999"
+        android:minDate="1/1/0" />
 
 
     <TextView

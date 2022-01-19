@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.view.View
 import android.widget.DatePicker
+import android.widget.DatePicker.OnDateChangedListener
+import android.widget.TextView
 import java.util.*
 
 class StartActivity : AppCompatActivity() {
@@ -13,8 +15,13 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        //val datePicker = findViewById<DatePicker>(R.id.datePicker)
-        //datePicker.minDate = 0
+        val explanationTextView = findViewById<TextView>(R.id.explanationText)
+        val datePicker = findViewById<DatePicker>(R.id.datePicker)
+        val onDateChangedListener = OnDateChangedListener{ view, year, month, day ->
+            explanationTextView.text = year.toString()
+        }
+
+        datePicker.setOnDateChangedListener(onDateChangedListener)
     }
 
     fun onMathButtonClick(view: View) {

@@ -9,6 +9,11 @@
         <entry key="app/src/main/res/drawable/ic_calendar_background.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/layout/activity_fact.xml" value="0.213768115942029" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.17255434782608695" />
+        <entry key="app/src/main/res/layout/fact_fragment.xml" value="0.286231884057971" />
+        <entry key="app/src/main/res/layout/fragment_fact.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_fact_list.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.17916666666666667" />
       </map>
     </option>
   </component>

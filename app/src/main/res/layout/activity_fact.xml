@@ -14,18 +14,17 @@
     android:divider="@drawable/empty_tall_divider"
     tools:context=".FactActivity">
 
-    <androidx.appcompat.widget.SearchView
+    <fragment
+        android:id="@+id/fact_list"
+        android:name="com.example.fumbernacts.FactListFragment"
         android:layout_width="match_parent"
-        android:layout_height="40sp"/>
+        android:layout_height="wrap_content"></fragment>
 
-    <ListView
+    <fragment
+        android:id="@+id/fact_detail"
+        android:name="com.example.fumbernacts.FactFragment"
         android:layout_width="match_parent"
-        android:layout_height="333sp"
-        />
+        android:layout_height="wrap_content"></fragment>
 
-    <TextView
-        android:id="@+id/detailledText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
+
 </LinearLayout>

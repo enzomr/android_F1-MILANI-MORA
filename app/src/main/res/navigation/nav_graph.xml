@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/factListFragment">
+    <fragment
+        android:id="@+id/factListFragment"
+        android:name="com.example.fumbernacts.FactListFragment"
+        android:label="fragment_fact_list"
+        tools:layout="@layout/fragment_fact_list" >
+        <action
+            android:id="@+id/action_factListFragment_to_factFragment"
+            app:destination="@id/factFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/factFragment"
+        android:name="com.example.fumbernacts.FactFragment"
+        android:label="fact_fragment"
+        tools:layout="@layout/fact_fragment" />
+</navigation>
