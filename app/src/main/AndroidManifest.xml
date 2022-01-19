@@ -8,15 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FumberNacts">
+        android:theme="@style/Theme.FumberNacts.NoActionBar">
         <activity
             android:name=".FactActivity"
             android:exported="false" />
-        <activity
-            android:name=".FactsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_facts"
-            android:theme="@style/Theme.FumberNacts.NoActionBar" />
         <activity
             android:name=".StartActivity"
             android:exported="true">
