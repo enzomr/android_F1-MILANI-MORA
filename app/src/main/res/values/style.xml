@@ -7,4 +7,8 @@
         <item name="android:orientation">vertical</item>
         <item name="android:backgroundTint">#00000000</item>
     </style>
+    <style name="datePickerStyle">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/black</item>
+    </style>
 </resources>

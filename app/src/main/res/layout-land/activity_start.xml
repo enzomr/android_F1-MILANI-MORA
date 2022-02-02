@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zinzoline"
+    android:divider="@drawable/empty_tall_divider"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="32sp"
+    android:paddingRight="32sp"
+    android:showDividers="middle"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:showDividers="middle"
+        android:divider="@drawable/empty_tall_divider"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mathButton"
+            style="@style/StartActivityButton"
+            android:onClick="onMathButtonClick"
+            android:text="@string/math_facts" />
+
+        <Button
+            android:id="@+id/triviaButton"
+            style="@style/StartActivityButton"
+            android:onClick="onTriviaButtonClick"
+            android:text="@string/trivias" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:maxDate="31/12/9999"
+            android:minDate="1/1/0"
+            android:theme="@style/datePickerStyle" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/explanationText"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/dateFactStartText"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/randomFactText"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/randomFactStartText"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

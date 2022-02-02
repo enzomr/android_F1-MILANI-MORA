@@ -42,25 +42,33 @@
 
     <DatePicker
         android:id="@+id/datePicker"
+        android:theme="@style/datePickerStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         android:maxDate="31/12/9999"
-        android:minDate="1/1/0" />
+        android:minDate="1/1/0"
+        />
 
 
     <TextView
         android:id="@+id/explanationText"
         android:layout_width="match_parent"
         android:layout_height="97dp"
-        android:text="Explanations" />
+        android:text="@string/dateFactStartText"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/randomFactText"
         android:layout_width="match_parent"
         android:layout_height="49dp"
-        android:text="TextView" />
+        android:text="@string/randomFactStartText"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
 
 </LinearLayout>

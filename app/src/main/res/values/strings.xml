@@ -2,4 +2,6 @@
     <string name="app_name">FumberNacts</string>
     <string name="math_facts">Math facts</string>
     <string name="trivias">Trivias</string>
+    <string name="dateFactStartText">Roll date picker to generate a fact about this date !</string>
+    <string name="randomFactStartText">A random fact will be generated… Wait for it !</string>
 </resources>
