@@ -1,14 +1,22 @@
 package com.example.fumbernacts
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 
 class FactActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fact)
+        setContentView(R.layout.list_fact)
+
+        val lv = findViewById<RecyclerView>(R.id.fact_list)
+        val llm = LinearLayoutManager(this)
+        llm.orientation = LinearLayoutManager.VERTICAL
+        val adapter = FactAdapter(IntArray(100))
+        lv.layoutManager = llm
+        lv.adapter =adapter
     }
 }

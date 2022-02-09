@@ -4,4 +4,6 @@
     <string name="trivias">Trivias</string>
     <string name="dateFactStartText">Roll date picker to generate a fact about this date !</string>
     <string name="randomFactStartText">A random fact will be generated… Wait for it !</string>
+    <string name="triviaFactStartText">Select a number to display a fact about it !</string>
+    <string name="mathFactStartText">Select a number to display a math fact about it !</string>
 </resources>
