@@ -75,7 +75,7 @@ class StartActivity : AppCompatActivity() {
         while (true){
             Log.d("COROUTINE", "sent")
             model.loadRandomFact()
-            delay(5000)
+            delay(10000)
         }
     }
 
