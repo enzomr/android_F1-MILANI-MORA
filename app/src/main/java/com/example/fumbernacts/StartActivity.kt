@@ -13,12 +13,19 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.util.*
 
 class StartActivity : AppCompatActivity() {
 
     private lateinit var explanationTextView: TextView
     private lateinit var randomFactTextView: TextView
     private val model: FactViewModel by viewModels()
+
+    private lateinit var datePicker: DatePicker
+
+    private var pickedYear : Int = 0;
+    private var pickedMonth : Int = 0;
+    private var pickedDay : Int = 0;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,12 +42,28 @@ class StartActivity : AppCompatActivity() {
             randomFactTextView.text = fact.fact
         })
 
-        val datePicker = findViewById<DatePicker>(R.id.datePicker)
+        datePicker = findViewById<DatePicker>(R.id.datePicker)
+
+        if(savedInstanceState != null){
+            datePicker.init(savedInstanceState.getInt("year"),
+                savedInstanceState.getInt("month"),
+                savedInstanceState.getInt("day"),
+                null)
+        }
+
         datePicker.setOnDateChangedListener(OnDateChangedListener{ view, year, month, day ->
             onDateChanged(view, year, month+1, day)
         })
 
+
         startRandomCoroutine()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("year", datePicker.year)
+        outState.putInt("month", datePicker.month)
+        outState.putInt("day", datePicker.dayOfMonth)
     }
 
     private fun onDateChanged(view: View, year: Int, month: Int, day: Int){
