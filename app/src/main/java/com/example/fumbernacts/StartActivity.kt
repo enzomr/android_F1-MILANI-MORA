@@ -82,12 +82,14 @@ class StartActivity : AppCompatActivity() {
     fun onMathButtonClick(view: View) {
         val intent = Intent(this, FactActivity::class.java).apply {
         }
+        intent.putExtra("isMath", true)
         startActivity(intent)
     }
 
     fun onTriviaButtonClick(view: View) {
         val intent = Intent(this, FactActivity::class.java).apply {
         }
+        intent.putExtra("isMath", false)
         startActivity(intent)
     }
 }
