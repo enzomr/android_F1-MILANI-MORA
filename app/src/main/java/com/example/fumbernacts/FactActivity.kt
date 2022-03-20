@@ -32,7 +32,7 @@ class FactActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
-        adapter.list = List(10) { it }
+        adapter.list = List(10000) { it }
         adapter.notifyDataSetChanged()
 
         tracker = SelectionTracker.Builder<Long>(
