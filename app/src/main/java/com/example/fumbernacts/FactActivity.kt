@@ -12,6 +12,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 
 class FactActivity : AppCompatActivity() {
@@ -50,8 +51,12 @@ class FactActivity : AppCompatActivity() {
             object : SelectionTracker.SelectionObserver<Long>() {
                 override fun onSelectionChanged() {
                     super.onSelectionChanged()
-                    selectedFact = tracker?.selection!!.first().toInt()
-                    startFactCoroutine()
+                    try {
+                        selectedFact = tracker?.selection!!.first().toInt()
+                        startFactCoroutine()
+                    } catch (e : Exception) {
+                        // Selection was empty
+                    }
                 }
             })
     }
