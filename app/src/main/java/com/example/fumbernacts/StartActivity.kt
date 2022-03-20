@@ -31,7 +31,10 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        // Textview related to the date fact
         explanationTextView = findViewById<TextView>(R.id.explanationText)
+
+        // Textview related to the random fact with the coroutine
         randomFactTextView = findViewById<TextView>(R.id.randomFactText)
 
         model.dateFactLiveData.observe(this, Observer<Fact>{ fact ->
@@ -44,6 +47,7 @@ class StartActivity : AppCompatActivity() {
 
         datePicker = findViewById<DatePicker>(R.id.datePicker)
 
+        // To keep data when app is rotated
         if(savedInstanceState != null){
             datePicker.init(savedInstanceState.getInt("year"),
                 savedInstanceState.getInt("month"),
@@ -54,7 +58,6 @@ class StartActivity : AppCompatActivity() {
         datePicker.setOnDateChangedListener(OnDateChangedListener{ view, year, month, day ->
             onDateChanged(view, year, month+1, day)
         })
-
 
         startRandomCoroutine()
     }
