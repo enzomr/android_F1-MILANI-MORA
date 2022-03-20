@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zinzoline"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingLeft="32sp"
+    android:paddingRight="32sp"
+    android:showDividers="middle"
+    android:divider="@drawable/empty_tall_divider"
+    tools:context=".StartActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fact_list"
+        android:layout_width="300dp"
+        android:layout_height="400sp"
+        android:layout_marginTop="20sp"
+    />
+
+    <TextView
+        android:id="@+id/factText"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_height="fill_parent"
+        android:text="@string/mathFactStartText"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>

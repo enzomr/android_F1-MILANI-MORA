@@ -9,6 +9,7 @@ class FactViewModel : ViewModel() {
 
     val dateFactLiveData = MutableLiveData<Fact>()
     val randomFactLiveData = MutableLiveData<Fact>()
+    val factLiveData = MutableLiveData<Fact>()
 
     fun loadRandomFact() = viewModelScope.launch {
         randomFactLiveData.value = numbersApi.getRandomFact()
@@ -16,6 +17,14 @@ class FactViewModel : ViewModel() {
 
     fun loadDateFact(day: Int, month: Int) = viewModelScope.launch {
         dateFactLiveData.value = numbersApi.getDateFact(day, month)
+    }
+
+    fun loadTrivia(number: Int) = viewModelScope.launch {
+        factLiveData.value = numbersApi.getTrivia(number)
+    }
+
+    fun loadMathFact(number: Int) = viewModelScope.launch {
+        factLiveData.value = numbersApi.getMathFact(number)
     }
 
 }

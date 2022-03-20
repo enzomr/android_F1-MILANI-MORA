@@ -65,7 +65,7 @@
     <TextView
         android:id="@+id/randomFactText"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="fill_parent"
         android:text="@string/randomFactStartText"
         android:textColor="@color/white"
         android:textSize="20sp"
